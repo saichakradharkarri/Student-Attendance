@@ -402,8 +402,8 @@ def mark_attendance_with_duplicate_prevention():
                     best = student
 
             if min_d < threshold and best:
-                student_id = best.get("studentId")
-                student_name = best.get("studentName")
+                student_id = best.get("studentId") or best.get("student_id")
+                student_name = best.get("studentName") or best.get("student_name")
 
                 # CHECK FOR DUPLICATE BEFORE MARKING
                 if student_id in already_present_students:
@@ -422,7 +422,7 @@ def mark_attendance_with_duplicate_prevention():
 
                 # MARK ATTENDANCE (Student not yet marked)
                 updated = collection.update_one(
-                    {"_id": ObjectId(session_id), "students.student_id": student_id, "students.present": False},
+                    {"_id": ObjectId(session_id), "students.student_id": student_id},
                     {"$set": {"students.$.present": True, "students.$.marked_at": datetime.now()}}
                 )
 

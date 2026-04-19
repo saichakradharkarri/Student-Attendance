@@ -174,7 +174,7 @@ export default function ViewAttendance() {
                 <h3 className="text-lg font-semibold text-slate-100">Filters</h3>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 <div className="space-y-1.5">
                   <label className="text-xs font-medium text-slate-400 uppercase tracking-wider flex items-center gap-2">
                     <Calendar size={12} /> Select Date
@@ -235,17 +235,7 @@ export default function ViewAttendance() {
                   </select>
                 </div>
 
-                <div className="space-y-1.5">
-                  <label className="text-xs font-medium text-slate-400 uppercase tracking-wider flex items-center gap-2">
-                    <BookOpen size={12} /> Subject
-                  </label>
-                  <input
-                    value={filterSubject}
-                    onChange={(e) => setFilterSubject(e.target.value)}
-                    placeholder="Subject..."
-                    className="w-full bg-slate-950/50 border border-white/10 px-4 py-2.5 rounded-xl text-slate-200 placeholder:text-slate-600 focus:ring-2 focus:ring-orange-500/50 outline-none transition-all"
-                  />
-                </div>
+
 
                 <div className="flex items-end gap-2">
                   <button

@@ -30,9 +30,9 @@ export default function ContactSection() {
   };
 
   const contactInfo = [
-    { icon: <Mail className="w-5 h-5" />, title: "Digital Vector", detail: "support@attendease.pro" },
-    { icon: <Phone className="w-5 h-5" />, title: "Secure Line", detail: "+1 (888) NEURAL-0" },
-    { icon: <MapPin className="w-5 h-5" />, title: "HQ Node", detail: "Neural Valley, CA 94025" }
+    { icon: <Mail className="w-5 h-5" />, title: "Email", detail: "saichakradharkarri@gmail.com" },
+    { icon: <Phone className="w-5 h-5" />, title: "Phone", detail: "+91-7981318144" },
+    { icon: <MapPin className="w-5 h-5" />, title: "Location", detail: "Kakinada, Andhra Pradesh" }
   ];
 
   return (
@@ -80,9 +80,25 @@ export default function ContactSection() {
           </motion.div>
 
           {/* Social / Extra Info */}
-          <div className="pt-8 flex items-center gap-4 text-muted-foreground/40 text-xs font-black uppercase tracking-widest">
-            <Globe className="w-4 h-4" />
-            Active Nodes: SF / LON / TYO / BLR
+          <div className="pt-8 flex flex-col gap-6">
+            <div className="flex items-center gap-4 text-muted-foreground/40 text-xs font-black uppercase tracking-widest">
+              <Globe className="w-4 h-4" />
+              Active Nodes: SF / LON / TYO / BLR
+            </div>
+            
+            {/* Secondary Logo */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mt-4"
+            >
+              <img 
+                src="/attendease_secondary_logo.png" 
+                alt="System Logo" 
+                className="h-24 w-auto object-contain rounded-2xl border border-white/5 shadow-2xl glass-card/50 p-2"
+              />
+            </motion.div>
           </div>
         </motion.div>
 

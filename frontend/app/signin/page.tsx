@@ -106,7 +106,7 @@ export default function SignInPage() {
   };
 
   return (
-    <div className="min-h-screen relative flex flex-col items-center justify-center p-4 sm:p-6 overflow-hidden">
+    <div className="min-h-screen relative flex flex-col items-center justify-center p-4 sm:p-6">
       {/* Back Button */}
       <motion.button
         initial={{ opacity: 0, x: -20 }}
@@ -272,17 +272,7 @@ export default function SignInPage() {
           </motion.div>
         </motion.div>
 
-        {/* Footer Info */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="mt-8 text-center"
-        >
-          <p className="text-muted-foreground/40 text-xs font-bold uppercase tracking-[0.2em]">
-            Precision Attendance AI • v2.0
-          </p>
-        </motion.div>
+
       </div>
     </div>
   );

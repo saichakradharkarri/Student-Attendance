@@ -33,7 +33,7 @@ export default function TeacherUpdateStudentDetails() {
   const [originalStudent, setOriginalStudent] = useState<Student | null>(null);
   const [searchResults, setSearchResults] = useState<Student[]>([]);
   const [searching, setSearching] = useState(false);
-  const [_loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
   const [updating, setUpdating] = useState(false);
   const [status, setStatus] = useState("");
   const [isAuthed, setIsAuthed] = useState<boolean | null>(null);

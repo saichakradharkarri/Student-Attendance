@@ -156,7 +156,7 @@ const MultiCameraCapture: React.FC<MultiCameraCaptureProps> = ({ onCapture }) =>
 
 
       {cameraStatus === "active" && currentStep < directions.length && (
-        <div className="text-center text-white space-y-2">
+        <div className="text-center text-slate-800 space-y-2">
           <p className="text-lg">
             Please look: <span className="font-bold">{directions[currentStep]}</span>
           </p>

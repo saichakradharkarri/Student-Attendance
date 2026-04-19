@@ -185,7 +185,7 @@ export default function StudentRegistrationForm() {
           </div>
           <button
             onClick={() => router.push(dashboardPath)}
-            className="flex items-center gap-2 px-4 py-2 glass-card/5 hover:glass-card/10 text-foreground/90 rounded-xl border-2 border-slate-300 hover:border-slate-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-semibold"
+            className="flex items-center gap-2 px-4 py-2 glass-card/5 hover:glass-card/10 text-slate-800 rounded-xl border-2 border-slate-300 hover:border-slate-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-semibold"
           >
             <Home className="w-4 h-4" />
             <span className="hidden sm:block">Dashboard</span>
@@ -194,7 +194,7 @@ export default function StudentRegistrationForm() {
       </header>
 
       <main className="p-4 relative z-10 max-h-[calc(100vh-120px)] overflow-y-auto">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {step === 1 ? (
             <div className="glass-card/90 backdrop-blur-lg rounded-2xl p-6 border-2 border-white/10 shadow-2xl">
               {/* Compact Form Header */}
@@ -275,7 +275,7 @@ export default function StudentRegistrationForm() {
               <div className="mt-6 flex gap-4">
                 <button
                   onClick={() => setStep(1)}
-                  className="flex-1 py-3 glass-card/5 hover:glass-card/10 text-foreground/90 rounded-xl font-semibold border-2 border-slate-300 hover:border-slate-400 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                  className="flex-1 py-3 glass-card/5 hover:glass-card/10 text-slate-800 rounded-xl font-semibold border-2 border-slate-300 hover:border-slate-400 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   Back to Form

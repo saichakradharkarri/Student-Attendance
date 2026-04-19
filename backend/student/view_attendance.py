@@ -35,7 +35,12 @@ def get_attendance():
         if year: roster_filter["year"] = year
         if division: roster_filter["division"] = division
 
-        roster = list(students_col.find(roster_filter)) if roster_filter else []
+        if not roster_filter and attendance_docs:
+            depts = list(set(doc.get("department") for doc in attendance_docs if doc.get("department")))
+            if depts: roster_filter["department"] = {"$in": depts}
+
+        roster = list(students_col.find(roster_filter)) if (roster_filter or not attendance_docs) else list(students_col.find({}))
+ 
 
         # Map session students by id for quick lookup
         session_map = {}
